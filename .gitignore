@@ -1,0 +1,11 @@
+venv/
+query1
+msmarco-docs.trec
+final_lexicon.txt
+final_index
+doctable.txt
+.idea
+.DS_Store
+client
+server.cpp
+wse/__pycache__

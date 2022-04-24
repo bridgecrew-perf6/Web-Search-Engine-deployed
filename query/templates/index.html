@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+
+<p>Hi, this is a web search engine!</p>
+<p>Only crawled websites in English language,</p>
+<p>so if you input key words in a language other than English, you may not get the expected result.</p>
+<form>
+    <label for="fname">Input the key words:</label><br>
+    {% if query %}
+        <input type="text" id="fname" name="fname" value="{{ query }}"><br>
+    {% else %}
+        <input type="text" id="fname" name="fname"><br>
+    {% endif %}
+    <input type="submit" value="Search">
+</form>
+{% if result %}
+    <p>{{ result|safe }}</p>
+{% endif %}
+
+</body>
+
+</html>
