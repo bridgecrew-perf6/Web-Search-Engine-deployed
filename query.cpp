@@ -546,7 +546,7 @@ public:
 };
 int main(int argc, char *argv[]){
 	
-	std::string trec_path = "../assign2_data/msmarco-docs.trec";
+	std::string trec_path = "msmarco-docs.trec";
 	std::string lexicon_path = "final_lexicon.txt", doctable_path = "doctable.txt", index_path = "final_index";
 	if(argc>=2) trec_path = argv[1];
 	if(argc>=3) index_path = argv[2]; 
@@ -562,7 +562,7 @@ int main(int argc, char *argv[]){
 	memset(&serv_addr, 0, sizeof(serv_addr)); 
 	serv_addr.sin_family = AF_INET; 
 	serv_addr.sin_addr.s_addr = inet_addr("127.0.0.1"); 
-	serv_addr.sin_port = htons(1234);
+	serv_addr.sin_port = htons(1235);
 	bind(serv_sock, (struct sockaddr*)&serv_addr, sizeof(serv_addr));
 	listen(serv_sock, 5);
 	
@@ -573,12 +573,12 @@ int main(int argc, char *argv[]){
 		
 		
 		std::ifstream ifs;
-		ifs.open("/home/hangzhang/test/media/query.txt",std::ios::in);
+		ifs.open("/home/hangzhang/Web-Search-Engine-deployed/media/query.txt",std::ios::in);
 		if (!ifs.is_open()){
 			std::cout << "read fail." << std::endl;
 		}
 		else{
-			fout.open("/home/hangzhang/test/media/result.txt", std::ios::out);
+			fout.open("/home/hangzhang/Web-Search-Engine-deployed/media/result.txt", std::ios::out);
 			getline(ifs, cur_query);
 			query.query(cur_query);
 			fout.close();
