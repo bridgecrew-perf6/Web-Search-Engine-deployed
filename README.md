@@ -26,22 +26,23 @@ pip install -r requirements.txt
 ```
 ### Config the django settings.
 ```bash
+cd ~/Web-Search-Engine-deployed
 vim wse/settings.py
-# change the ip address in line 28 to your server's ip address
-# then quit vim
+Change the ip address in line 28 to your server's ip address
+Then quit vim
 ```
 ### Install apache2
 ```bash
+cd ~
 sudo apt-get install apache2
 sudo apt-get install libapache2-mod-wsgi-py3
 ```
 ### Config the apache2
 ```bash
-cd /etc/apache2/sites-available
 sudo cp ~/Web-Search-Engine-deployed/wse.conf /etc/apache2/sites-available
 sudo vim /etc/apache2/sites-available/sites-available
-# In line 34,35,39,45 and 46, change the home directory path to yours(Mine is /home/hangzhang)
-# Then save and quit vim
+In line 34,35,39,45 and 46, change the home directory path to yours(Mine is /home/hangzhang)
+Then save and quit vim
 ```
 ### Enable the apache2 configuration
 ```bash
@@ -62,6 +63,7 @@ sudo chmod -R 775 Web-Search-Engine-deployed/media/
 
 ### Allow http
 ```bash
+cd ~
 sudo ufw allow http/tcp
 sudo service apache2 restart
 ```
@@ -70,15 +72,15 @@ sudo service apache2 restart
 ```bash
 cd ~/Web-Search-Engine-deployed
 vim query/views.py
-# In line 15, 21, 23, 24, 29, change the home directory path to yours(Mine is /home/hangzhang), then quit vim
+In line 15, 21, 23, 24, 29, change the home directory path to yours(Mine is /home/hangzhang), then quit vim
 vim query.cpp
-# In line 576 and 581, change the home directory path to yours(Mine is /home/hangzhang), then quit vim
+In line 576 and 581, change the home directory path to yours(Mine is /home/hangzhang), then quit vim
 ```
 ### Start the engine
 ```bash
+cd ~/Web-Search-Engine-deployed
 g++ -O3 query.cpp  -std=c++11 -o query_engine
 g++ -O3 client.cpp  -std=c++11 -o client
-# chmod 775 client
 ./query_engine msmarco-docs.trec # Wait patiently, it will load the data for 1-2 minutes:
 ```
 ### Restart the apache2
