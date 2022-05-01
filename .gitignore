@@ -9,3 +9,4 @@ doctable.txt
 client
 server.cpp
 wse/__pycache__
+query_engine
