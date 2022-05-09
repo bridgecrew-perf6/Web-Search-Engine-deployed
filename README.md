@@ -87,4 +87,4 @@ g++ -O3 client.cpp  -std=c++11 -o client
 ```bash
 sudo service apache2 restart
 ```
-### Input your server's ip address on browser!
+### Input your server's ip address on your browser!
