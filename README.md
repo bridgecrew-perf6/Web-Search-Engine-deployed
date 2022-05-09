@@ -68,7 +68,7 @@ sudo ufw allow http/tcp
 sudo service apache2 restart
 ```
 
-### Change the absolute path in views.py 
+### Change the absolute path in views.py(Never use ~)
 ```bash
 cd ~/Web-Search-Engine-deployed
 vim query/views.py
