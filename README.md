@@ -5,7 +5,7 @@
 cd ~
 git clone https://github.com/hangzhangac/Web-Search-Engine-deployed.git
 ```
-### Put final_lexicon.txt final_index doctable.txt in the root dir of this repo. You can find them here.
+### Put final_lexicon.txt final_index doctable.txt in the root dir of this repo. You can download them [here](https://drive.google.com/drive/folders/1lnXNU-8MvvcwOaX4BzAvVrQvs8LMHnbI?usp=sharing). The code to generate these files is [here](https://github.com/hangzhangac/Web-Search-Engine).
 ###
 ```bash
 mv final_lexicon.txt final_index doctable.txt ~/Web-Search-Engine-deployed
