@@ -23,8 +23,26 @@ def index(request):
         os.system("/home/hangzhang/Web-Search-Engine-deployed/client")
         with open('/home/hangzhang/Web-Search-Engine-deployed/media/result.txt', 'r',encoding="utf-8")as fr:
             result = fr.read()
-            result = result.replace('\n', '<br>')
-            context['result'] = result
+            # result = result.replace('\n', '<br>')
+            # context['result'] = result
+        res = []
+        result = result.split('------------------------------------------------------------------------\n')
+        for segment in result:
+            if segment == '':
+                continue
+            try:
+                url, snip, nothing = segment.split('\n')
+            except:
+                continue
+            url = url[4:]
+            snippet = snip[18:]
+            x = dict()
+            x['url'] = url
+            x['snippet'] = snippet
+            res.append(x)
+        context['result'] = res
+
+
         os.system("rm result.txt")
         with open('/home/hangzhang/Web-Search-Engine-deployed/media/result.txt', 'w')as fw:
             fw.write("No result...")

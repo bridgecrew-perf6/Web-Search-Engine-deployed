@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+	  <title>Web Search Engine Project</title>
+</head>
 
 <body>
 
 <p>Hi, this is a web search engine!</p>
+<p>The code deploying the search engine to the web is <a href="https://github.com/hangzhangac/Web-Search-Engine-deployed">here</a>.</p>
+<p>The implement of the search engine is <a href="https://github.com/hangzhangac/Web-Search-Engine">here</a>.</p>
 <p>Only crawled websites in English language,</p>
 <p>so if you input key words in a language other than English, you may not get the expected result.</p>
 <form>
@@ -16,7 +21,11 @@
     <input type="submit" value="Search">
 </form>
 {% if result %}
-    <p>{{ result|safe }}</p>
+{% for web in result %}
+	<p>URL: <a href="{{web.url}}" target="_blank">{{web.url}}</a></p>
+	<p>Snippet(Context): {{web.snippet}}</p>
+	<p>------------------------------------------------------</p>
+{% endfor %}
 {% endif %}
 
 </body>

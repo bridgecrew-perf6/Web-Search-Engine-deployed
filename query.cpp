@@ -422,7 +422,7 @@ public:
 	}
 	
 	// TAAT method for disjunctive query
-	void disjunctive(std::vector<std::string>terms, std::string delimiters, int return_number=10){
+	void disjunctive(std::vector<std::string>terms, std::string delimiters, int return_number=50){
 //		std::cout<<"Disjunctive query in TAAT"<<std::endl;
 		int num=terms.size();
 		if(num==0)return;
@@ -455,7 +455,7 @@ public:
 	}
 	
 	//DAAT method for conjunctive query
-	void conjunctive(std::vector<std::string>terms, std::string delimiters, int return_number=10){
+	void conjunctive(std::vector<std::string>terms, std::string delimiters, int return_number=50){
 //		std::cout<<"Conjunctive query in DAAT"<<std::endl;
 		int num=terms.size();
 		if(num==0)return;
