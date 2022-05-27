@@ -1,5 +1,9 @@
 # Web-Search-Engine-deployed
-## Depoly this repo to a web with apache2 on Ubuntu
+## Depoly this repo to a web with apache2 on Ubuntu(18.04 or above)
+### Update your system
+```bash
+sudo apt-get update
+```
 ### Clone the repo
 ```bash
 cd ~
