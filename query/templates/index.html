@@ -11,15 +11,19 @@
 <p>The implement of the search engine is <a href="https://github.com/hangzhangac/Web-Search-Engine">here</a>.</p>
 <p>Only crawled websites in English language,</p>
 <p>so if you input key words in a language other than English, you may not get the expected result.</p>
+<div style="width:100%;text-align:center">
 <form>
-    <label for="fname">Input the key words:</label><br>
+	<!-- <label for="fname">Input the key words:</label><br> -->
+    Input key words:<br>
     {% if query %}
-        <input type="text" id="fname" name="fname" value="{{ query }}"><br>
+        <input type="text" name="user_query" value="{{ query }}" style="width:200px; height:20px;"><br>
     {% else %}
-        <input type="text" id="fname" name="fname"><br>
+    	<input type="text" name="user_query" style="width:200px; height:20px;"><br>
+	<!-- <input type="text" id="fname" name="fname"><br> -->
     {% endif %}
     <input type="submit" value="Search">
 </form>
+</div>
 {% if result %}
 {% for web in result %}
 	<p>URL: <a href="{{web.url}}" target="_blank">{{web.url}}</a></p>

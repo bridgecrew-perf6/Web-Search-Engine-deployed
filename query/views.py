@@ -7,8 +7,8 @@ def index(request):
     context = {}
     context['result'] = None
     context['query'] = None
-    if 'fname' in request.GET and request.GET['fname']:
-        query = request.GET['fname']
+    if 'user_query' in request.GET and request.GET['user_query']:
+        query = request.GET['user_query']
         context['query'] = query
         print(query)
         print(os.getcwd())
