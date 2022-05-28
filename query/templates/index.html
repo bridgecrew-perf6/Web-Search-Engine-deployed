@@ -14,14 +14,14 @@
 <div style="width:100%;text-align:center">
 <form>
 	<!-- <label for="fname">Input the key words:</label><br> -->
-    Input key words:<br>
+	<!-- Input key words:<br> -->
     {% if query %}
-        <input type="text" name="user_query" value="{{ query }}" style="width:200px; height:20px;"><br>
+        <input type="text" name="user_query" value="{{ query }}" style="width:400px; height:40px;font-size:37px;">
     {% else %}
-    	<input type="text" name="user_query" style="width:200px; height:20px;"><br>
+    	<input type="text" name="user_query" style="width:400px; height:40px;font-size:37px;">
 	<!-- <input type="text" id="fname" name="fname"><br> -->
     {% endif %}
-    <input type="submit" value="Search">
+    <input type="submit" value="Search" text-align: "center" style="width:150px; height:45px;font-size:37px">
 </form>
 </div>
 {% if result %}
