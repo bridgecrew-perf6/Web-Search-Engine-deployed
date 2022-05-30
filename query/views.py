@@ -16,7 +16,8 @@ def index(request):
         with open('/home/hangzhang/Web-Search-Engine-deployed/media/queryset.txt','a+') as fa:
             fa.write(query.strip()+'\n')
         tmp = query.strip().split()
-        context['keywords'] = tmp
+        highlight_words = list(set(tmp))
+        context['keywords'] = highlight_words
         if len(tmp) > 8:
             tmp = tmp[:8]
         query = ' '.join(tmp)

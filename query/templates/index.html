@@ -7,8 +7,8 @@
 <body>
 
 <p>Hi, this is a web search engine!</p>
-<p>The code deploying the search engine to the web is <a href="https://github.com/hangzhangac/Web-Search-Engine-deployed">here</a>.</p>
-<p>The implement of the search engine is <a href="https://github.com/hangzhangac/Web-Search-Engine">here</a>.</p>
+<!-- <p>The code deploying the search engine to the web is <a href="https://github.com/hangzhangac/Web-Search-Engine-deployed">here</a>.</p> -->
+<!-- <p>The implement of the search engine is <a href="https://github.com/hangzhangac/Web-Search-Engine">here</a>.</p> -->
 <p>Only crawled websites in English language,</p>
 <p>so if you input key words in a language other than English, you may not get the expected result.</p>
 <div style="width:100%;text-align:center">
@@ -35,7 +35,9 @@
 </div>
 	<script type="text/javascript">
 		{% for word in keywords %}
-document.getElementById("result").innerHTML = document.getElementById("result").innerHTML.replace(/{{word}}/ig,"<span style='color: red;'>$&</span>"); 
+			{% if word|length >= 2 %}	
+				document.getElementById("result").innerHTML = document.getElementById("result").innerHTML.replace(/{{word}}/ig,"<span style='color: red;'>$&</span>"); 
+			{% endif %}
 		{% endfor %}
 	</script>
 </body>
