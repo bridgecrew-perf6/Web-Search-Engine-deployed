@@ -1,6 +1,6 @@
 # Web-Search-Engine-deployed
 ## Depoly this repo to a web with apache2 on Ubuntu(18.04 or above)
-### Please make sure your server has at least 30GB storage and 4GB memory
+### Please make sure your server has 30GB storage and 4GB memory at least.
 ### Update your system
 ```bash
 sudo apt-get update
