@@ -36,7 +36,6 @@
 	<script type="text/javascript">
 		{% for word in keywords %}
 document.getElementById("result").innerHTML = document.getElementById("result").innerHTML.replace(/{{word}}/ig,"<span style='color: red;'>$&</span>"); 
-		// document.body.innerHTML = document.body.innerHTML.replace(/{{word}}/ig,"<span style='color: red;'>$&</span>"); -->
 		{% endfor %}
 	</script>
 </body>
