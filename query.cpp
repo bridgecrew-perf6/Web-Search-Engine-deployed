@@ -583,13 +583,10 @@ int main(int argc, char *argv[]){
 			query.query(cur_query);
 			fout.close();
 		}
-		//向客户端发送数据
 		char str[] = "Query Successfully!";
 		write(clnt_sock, str, sizeof(str));
 		std::cout<<"Done: "<<cur_query<<std::endl;
 		ifs.close();
-		//关闭套接字
-		//close(clnt_sock);
 	}
 	close(serv_sock);
 
