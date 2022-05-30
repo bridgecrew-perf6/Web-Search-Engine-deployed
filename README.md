@@ -34,7 +34,7 @@ pip install -r requirements.txt
 cd ~/Web-Search-Engine-deployed
 vim wse/settings.py
 Change the ip address in line 28 to your server's ip address
-Then quit vim
+Then save and quit vim
 ```
 ### Install apache2
 ```bash
@@ -77,9 +77,9 @@ sudo service apache2 restart
 ```bash
 cd ~/Web-Search-Engine-deployed
 vim query/views.py
-In line 15, 21, 23, 24, 29, change the home directory path to yours(Mine is /home/hangzhang), then quit vim
+Change all the appearance of the home directory path to yours(Mine is /home/hangzhang), then save and quit vim
 vim query.cpp
-In line 576 and 581, change the home directory path to yours(Mine is /home/hangzhang), then quit vim
+In line 576 and 581, change the home directory path to yours(Mine is /home/hangzhang), then save and quit vim
 ```
 ### Start the engine
 ```bash
