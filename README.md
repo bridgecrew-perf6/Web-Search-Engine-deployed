@@ -45,7 +45,7 @@ sudo apt-get install libapache2-mod-wsgi-py3
 ### Config the apache2
 ```bash
 sudo cp ~/Web-Search-Engine-deployed/wse.conf /etc/apache2/sites-available
-sudo vim /etc/apache2/sites-available/sites-available/wse.conf
+sudo vim /etc/apache2/sites-available/wse.conf
 In line 34,35,39,45 and 46, change the home directory path to yours(Mine is /home/hangzhang)
 Then save and quit vim
 ```
