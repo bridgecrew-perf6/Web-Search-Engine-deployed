@@ -24,6 +24,7 @@
     <input type="submit" value="Search" text-align: "center" style="width:150px; height:45px;font-size:37px">
 </form>
 </div>
+<div id="result">
 {% if result %}
 {% for web in result %}
 	<p>URL: <a href="{{web.url}}" target="_blank">{{web.url}}</a></p>
@@ -31,7 +32,13 @@
 	<p>------------------------------------------------------</p>
 {% endfor %}
 {% endif %}
-
+</div>
+	<script type="text/javascript">
+		{% for word in keywords %}
+document.getElementById("result").innerHTML = document.getElementById("result").innerHTML.replace(/{{word}}/ig,"<span style='color: red;'>$&</span>"); 
+		// document.body.innerHTML = document.body.innerHTML.replace(/{{word}}/ig,"<span style='color: red;'>$&</span>"); -->
+		{% endfor %}
+	</script>
 </body>
 
 </html>

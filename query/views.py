@@ -7,6 +7,7 @@ def index(request):
     context = {}
     context['result'] = None
     context['query'] = None
+    context['keywords'] = []
     if 'user_query' in request.GET and request.GET['user_query']:
         query = request.GET['user_query']
         context['query'] = query
@@ -15,6 +16,7 @@ def index(request):
         with open('/home/hangzhang/Web-Search-Engine-deployed/media/queryset.txt','a+') as fa:
             fa.write(query.strip()+'\n')
         tmp = query.strip().split()
+        context['keywords'] = tmp
         if len(tmp) > 8:
             tmp = tmp[:8]
         query = ' '.join(tmp)
