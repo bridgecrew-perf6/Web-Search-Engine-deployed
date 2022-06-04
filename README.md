@@ -31,7 +31,7 @@ pip install -r requirements.txt
 ```
 ### Config the django settings.
 ```bash
-cd ~/Web-Search-Engine-deployed
+cd ~/Web-Search-Engine-deployed/wse
 vim wse/settings.py
 Change the ip address in line 28 to your server's ip address
 Then save and quit vim
